@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" th:action="@{/event/add}" th:object="${event}">
+    <div>
+        <label>Название мероприятия: <input th:field="*{eventTitle}" type="text"></label>
+    </div>
+    <div>
+        <label>Описание мероприятия: <textarea th:field="*{eventDescription}"></textarea></label>
+    </div>
+    <div>
+        <label>Дата начала: <input th:field="*{eventStart}" type="datetime-local"></label>
+    </div>
+    <p><input type="submit" value="Добавить"></p>
+</form>
+<p><a href="/">на главную</a></p>
+</body>
+</html>
